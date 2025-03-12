@@ -7,10 +7,10 @@ const currentPath = Astro.url.pathname;
   <a href="/">
     <Logo />
   </a>
-  <h1 class="textcenter">SCI-FISTIVAL</h1>
+  <h4 class="textcenter">SCI-FISTIVAL</h4>
   <button
     id="menu-btn"
-    class="group relative z-10 flex h-3 w-6 flex-col justify-between lg:hidden *:block *:ease *:h-0.5 *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
+    class="group relative z-10 flex h-3 w-6 flex-col justify-between lg:hidden *:block *:ease *:h-0.5 *:w-full *:transform *:rounded-full *:bg-white *:transition *:duration-300"
     aria-label="Menu"
     aria-controls="menu"
     aria-expanded="false"
@@ -20,26 +20,35 @@ const currentPath = Astro.url.pathname;
   </button>
   <nav
     id="menu"
-    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-indigo-50 visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
+    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-black visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
     aria-hidden="true"
   >
-    <ul class="flex flex-col gap-4 lg:flex-row">
+    <ul class="text-center gap-4 lg:flex-row">
       <li>
-        <a class="block p-4 rounded-lg text-green-50" href="/Programmefilms">Programme films</a>
+        <a class="block p-4 rounded-lg text-emerald-300" href="/Programmefilms"><h3>Programme films</h3></a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-green-50" href="/Programmeactivités">Programme activités</a>
+        <hr class="border-t border-emerald-300 my-2" />
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-green-50" href="/Invités">Invités</a>
+        <a class="block p-4 rounded-lg text-emerald-300" href="/Programmeactivités"><h3>Programme activités</h3></a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-green-50" href="/Infospratiques">Infos pratiques</a>
+        <hr class="border-t border-emerald-300 my-2" />
+      </li>
+      <li>
+        <a class="block p-4 rounded-lg text-emerald-300" href="/Invités"><h3>Invités</h3></a>
+      </li>
+      <li>
+        <hr class="border-t border-emerald-300 my-2" />
+      </li>
+      <li>
+        <a class="block p-4 rounded-lg text-emerald-300" href="/Infospratiques"><h3>Infos pratiques</h3></a>
       </li>
     </ul>
     <div class="flex items-center justify-center gap-4 px-4">
-      <Button variant="outlined" url="/login" text="Login" />
-      <Button variant="dark" url="/signup" text="Sign Up" />
+      <Button variant="default" url="/Billetterie" text="Billetterie" />
+
     </div>
   </nav>
 </header>
