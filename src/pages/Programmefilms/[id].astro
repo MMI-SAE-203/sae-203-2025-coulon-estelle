@@ -1,0 +1,49 @@
+---
+import { formatDate } from '../../../helpers'
+import Layout from "../../layouts/Layout.astro";
+import { getMovieById } from "../../../backend/backend.mjs";
+import ImgPb from "../../components/ImgPb.astro";
+
+const film = await getMovieById(Astro.params.id);
+console.log(film);
+
+---
+<Layout>
+    <article>
+        <a href={`/Programmefilms/${film.id}`}>
+        <ImgPb 
+        record={film}
+        field="image"
+        alt={film.titre}
+        classPicture="col-span-1 row span-3 flex items-center justify-center"
+        classImg="object-cover"/>
+        </a>
+        <div
+        class="relative px-6 py-4 space-y-2"
+        >
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.titre}
+        </p>
+        <p class="text-black flex justify-center items-center">{(film.date_de_projection)}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.synopsis}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">
+            <a class="text-black" href={`/Programmefilms/${film.id}`}>{film.bande_annonce}</a>
+        </p>
+        <div>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.langue}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.production}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">
+            {film.expand?.realisateur_acteur.nom_prenom}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.date_de_projection}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.duree}
+        </p>
+        <p class=" font-semibold py-2 flex justify-center items-center">{film.annee_de_sortie}
+        </p>
+        </div>
+    </article>
+</Layout>
