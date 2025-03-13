@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Button from "../../components/Button.astro"
+---
+
+<Layout>
+    <div class="lg:grid lg:grid-cols-3">
+    <h2 class="text-center py-6 col-start-2">Contact</h2>
+    <div class="items-center">
+       
+        <h3>Nom</h3>
+        <input type="text" class="relative bg-teal-50  flex justify-center items-center py-6 col-start-2"/>
+        </div>
+    <div class=" ml-10 items-center py-3 col-start-2 lg:justify-center lg:ml-20">
+        <h3>Prénom</h3>
+            <input type="text" class="relative bg-teal-50  flex justify-center items-center py-6 col-start-2"/>
+        </div>
+    <div class=" ml-10 items-center py-3 col-start-2 lg:justify-center lg:ml-20">
+        <h3>Email</h3>
+        <input type="text" class="relative bg-teal-50"/>
+        </div>
+
+    <div class=" ml-10 items-center py-3 col-start-2 lg:justify-center lg:ml-20 ">
+        <h3>Messages</h3>
+        <textarea class="relative bg-teal-50 h-96 w-full"></textarea>
+    </div>
+
+    <div class=" flex justify-center items-center py-6 col-start-2">
+        <Button variant="default" url="/" text="Envoyer"/>
+        </div>
+
+    </div>
+
+</div>
+</Layout>
