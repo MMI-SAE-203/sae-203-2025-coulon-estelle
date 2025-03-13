@@ -1,0 +1,26 @@
+---
+import ImgPb from './ImgPb.astro';
+
+const {...invite} = Astro.props;
+---
+
+<article>
+    <a href={`/Programmefilms/${invite.id}`}>
+        <ImgPb 
+        record={invite}
+        field="image"
+        alt={invite.nom_prenom}
+        classPicture="col-span-1 row span-3 flex items-center justify-center"
+        classImg="object-cover"/>
+    </a>
+    <div
+        class="relative px-6 py-4 space-y-2"
+    >
+        <p class=" font-semibold py-2 flex justify-center items-center">
+            <a class="text-black" href={`/Programmefilms/${invite.id}`}>{invite.nom_prenom}</a>
+        </p>
+        <p class="text-black flex justify-center items-center">
+            <p class=" font-bold ">{invite.biographie}</p>
+        </p>
+    </div>
+</article>

@@ -9,7 +9,7 @@ console.log(film);
 
 ---
 <Layout>
-    <article>
+    <article class="pb-10 pt-10">
         <a href={`/Programmefilms/${film.id}`}>
         <ImgPb 
         record={film}
@@ -27,22 +27,21 @@ console.log(film);
         </p>
         <p class=" font-semibold py-2 flex justify-center items-center">{film.synopsis}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">
+        <p class=" font-semibold py-2 flex justify-center text-center">
             <a class="text-black" href={`/Programmefilms/${film.id}`}>{film.bande_annonce}</a>
         </p>
-        <div>
-        <p class=" font-semibold py-2 flex justify-center items-center">{film.langue}
+        <div class="font-semibold py-2 grid grid-cols-3 gap-4"></div>
+        <p>{film.langue}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">{film.production}
+        <p>{film.production}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">
-            {film.expand?.realisateur_acteur.nom_prenom}
+        <p>{film.expand?.realisateur_acteur.nom_prenom}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">{film.date_de_projection}
+        <p>{film.date_de_projection}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">{film.duree}
+        <p>{film.duree}
         </p>
-        <p class=" font-semibold py-2 flex justify-center items-center">{film.annee_de_sortie}
+        <p>{film.annee_de_sortie}
         </p>
         </div>
     </article>

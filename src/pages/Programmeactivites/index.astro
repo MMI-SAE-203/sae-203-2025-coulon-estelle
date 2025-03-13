@@ -2,17 +2,17 @@
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
 import { Image } from 'astro:assets';
-import Robot from '../../assets/images/header_sci-fistival/robot.png';
-import { getAllMoviesDate } from '../../../backend/backend.mjs';
-const films = await getAllMoviesDate();
+import Cyber from '../../assets/images/header_sci-fistival/cyber.png';
+import { getAllActivitesDate } from '../../../backend/backend.mjs';
+const activite = await getAllActivitesDate();
 import Card from '../../components/Card.astro';
-console.log(films);
+console.log(activite);
 ---
 
 <Layout>
   <div class="bg-green-50">
 
-      <Image src={Robot} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
+      <Image src={Cyber} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
         <div class="pb-10">
           <h1>SCI-FISTIVAL</h1>
@@ -23,19 +23,19 @@ console.log(films);
 
     <div>
         <div class="text-center pt-10 pb-10">
-            <h2>Programme Films</h2>
+            <h2>Programme Activite</h2>
         </div>
         <div class="text-center pb-10 text-teal-700">
           <h2>Samedi 14 mars</h2>
         </div>
 
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {films.length > 0 ? (
-            films.map((film) => (
-              <Card {...film} />
+          {activite.length > 0 ? (
+            activite.map((activite) => (
+              <Card {...activite} />
             ))
           ) : (
-            <p>Aucun film trouvé.</p>
+            <p>Aucune activitée trouvée.</p>
           )}
         </div>
         <div class="text-center pb-10 text-teal-700 flex-auto">

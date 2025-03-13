@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Cyber from '../../assets/images/header_sci-fistival/cyber.png';
+import { allActiviteByInvite } from '../../../backend/backend.mjs';
+const invites = await allActiviteByInvite();
+import CardInvite from '../../components/CardInvite.astro';
+console.log(invites);
+---
+
+<Layout>
+    <div class="bg-green-50">
+
+            <Image src={Cyber} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <div class="pb-10">
+                    <h1>SCI-FISTIVAL</h1>
+                    <h3>Ce festival n’existe</h3>
+                    <h3>pas sans vous</h3>
+                </div>
+            </div>
+
+        <div>
+                <div class="text-center pt-10 pb-10">
+                        <h2>Liste des Invités</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {invites.length > 0 ? (
+                        invites.map((invite) => (
+                            <CardInvite {...invite} />
+                        ))
+                    ) : (
+                        <p>Aucun invité trouvé.</p>
+                    )}
+    </Layout>
