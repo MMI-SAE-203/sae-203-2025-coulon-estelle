@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import { Image } from 'astro:assets';
+import lune from '../../assets/images/header_sci-fistival/lune.png';
+---
+
+<Layout>
+  <div class="bg-green-50">
+
+      <Image src={lune} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <div class="pb-10">
+          <h1>SCI-FISTIVAL</h1>
+          <h3>Ce festival n’existe</h3>
+          <h3>pas sans vous</h3>
+        </div>
+      </div>
+
+    <div>
+        <div class="text-center pt-10 pb-10">
+            <h2>Info Festival</h2>
+        </div>
+        <div class="pb-10">
+            <h3 class="pb-5">Combien ça coûte?</h3>
+            <p class="pb-5">Les billets sont à 15€ par jour, ou 40€ pour le week-end complet. Des réductions de 10% sont disponibles pour les étudiants, les familles nombreuses et les groupes de plus de 10 personnes.</p>
+        </div>
+        <div class="flex justify-center pb-10">
+            <Button variant="default" url="/Billeterie" text="Réserver le billet" />
+        </div>
+        <div class="pb-10">
+            <h3 class="pb-5">Où ce passe le festival ?</h3>
+            <p class="pb-5">Le festival se tiendra principalement au Glacis de Belfort, situé au 2 Rue André Parant, 90000 Belfort. Les projections auront lieu au Cinéma Pathé Belfort, situé au 1 Rue de l'As de Carreau, 90000 Belfort. Divers ateliers et conférences se dérouleront au Centre Culturel et Social des Résidences Bellevue, au 4 Rue de Madrid, 90000 Belfort.</p>
+        </div>
+        <div class="pb-10">
+            <h3 class="pb-5">Où ce loger ?</h3>
+            <p class="pb-5">Pour votre séjour, vous pouvez réserver une chambre à l'Hôtel Kyriad Belfort Centre ou à l'Hôtel Première Classe Belfort. Si vous préférez le camping, le Camping de l'Étang des Forges et le Camping du Lac de Malsaucy sont à votre disposition.</p>
+        </div>
+        <div class="pb-10">
+            <h3 class="pb-5">Comment y aller ?</h3>
+            <p class="pb-5">La Gare de Belfort est bien desservie par les TGV et TER, facilitant votre arrivée en train. Si vous venez en voiture, prenez l'autoroute A36 et sortez à Belfort. Le covoiturage est également une option pratique, avec des plateformes comme BlaBlaCar. Des parkings sont disponibles à proximité du site du festival.</p>
+        </div>
+        <h4>Nous vous attendons nombreux pour un week-end inoubliable dédié à la science-fiction ! Pour plus d'informations, consultez notre site internet.</h4>
+    </div>
+    </div>
+</Layout>
