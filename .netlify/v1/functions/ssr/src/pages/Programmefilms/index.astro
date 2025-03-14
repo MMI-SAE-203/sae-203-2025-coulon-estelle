@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import { Image } from 'astro:assets';
+import Robot from '../../assets/images/header_sci-fistival/robot.png';
+import { getAllMoviesDate } from '../../../backend/backend.mjs';
+const films = await getAllMoviesDate();
+import Card from '../../components/Card.astro';
+console.log(films);
+---
+
+<Layout>
+  <div class="bg-green-50">
+
+      <Image src={Robot} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <div class="pb-10">
+          <h1>SCI-FISTIVAL</h1>
+          <h3>Ce festival n’existe</h3>
+          <h3>pas sans vous</h3>
+        </div>
+      </div>
+
+    <div>
+        <div class="text-center pt-10 pb-10">
+            <h2>Programme Films</h2>
+        </div>
+        <div class="text-center pb-10 text-teal-700">
+          <h2>Samedi 14 mars</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {films.length > 0 ? (
+            films.map((film) => (
+              <Card {...film} />
+            ))
+          ) : (
+            <p>Aucun film trouvé.</p>
+          )}
+        </div>
+        <div class="text-center pb-10 text-teal-700 flex-auto">
+          <h4>Pour savoir le programe au bout des doigts, téléchargez son PDF !</h4>
+          <div class ="pt-10">
+            <Button variant="default" url="/" text="Programme PDF"/>
+          </div>
+        </div>
+      </div>
+  
+  </Layout>

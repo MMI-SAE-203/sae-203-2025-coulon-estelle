@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import { Image } from 'astro:assets';
+import chat from '../../assets/images/header_sci-fistival/chat.png';
+---
+
+<Layout>
+  <div class="bg-green-50">
+
+      <Image src={chat} alt="chat" class="relative w-full lg:w-1/2 lg:ml-96"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <div class="pb-10">
+          <h1>SCI-FISTIVAL</h1>
+          <h3>Ce festival n’existe</h3>
+          <h3>pas sans vous</h3>
+        </div>
+      </div>
+
+    <div>
+        <div class="text-center pt-10 pb-10">
+            <h2>À propos</h2>
+        </div>
+        <div class="pb-10">
+            <p class="pb-5">Bienvenue au Sci-fi'stival, le rendez-vous incontournable pour tous les passionnés de science-fiction ! Rejoignez-nous le week-end du 14 mars au Glacis de Belfort, un espace en plein air pouvant accueillir entre 5 000 et 10 000 personnes. Ce festival unique est ouvert à tous, des étudiants aux familles, en passant par les amateurs de tous âges et horizons.</p>
+            <p>Créé cette année, le Sci-fi'stival célèbre la science-fiction sous toutes ses formes. C'est l'occasion idéale pour rencontrer des réalisateurs, écrivains et artistes, découvrir leurs œuvres et échanger avec eux. Depuis sa création, le festival s'est rapidement imposé comme un événement majeur pour les fans du genre. Pour plus d’info, vous pouvez regarder notre programme du week-end! </p>
+        </div>
+        <div class="flex justify-center pb-10">
+            <Button variant="default" url="/Programme" text="Programme" />
+        </div>
+        <div class="pb-10">
+            <p class="pb-5">Le festival est organisé par une équipe passionnée, dirigée par Estelle Coulon, et soutenue par une équipe technique dévouée. Ensemble, ils veillent à ce que chaque projection et installation soit de la plus haute qualité.</p>
+            <p class="pb-5">Belfort, ville dynamique et accessible, est bien desservie par les transports publics à des coûts abordables, facilitant les déplacements depuis les villes voisines comme Montbéliard, Besançon ou Mulhouse. Pour ceux venant de plus loin, Belfort propose un large choix d'hôtels et de restaurants à proximité du site, garantissant un séjour confortable.</p>
+            <h4>Rejoignez-nous pour un week-end inoubliable dédié à la science-fiction !</h4>
+        </div>
+        <div class="flex justify-center pb-10">
+            <Button variant="default" url="/Billetterie" text="Réserver le billet" />
+        </div>
+            
+
+    </div>
+    </div>

@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import accueil from '../assets/images/header_sci-fistival/accueil.png';
+import fleche_sci_fi from '../assets/icon_sci-fi/fleche_sci-fi.png';
+import france_trois from '../assets/images/partenaires/france_trois.png';
+import gouvernement from '../assets/images/partenaires/gouvernement.png';
+import le_monde from '../assets/images/partenaires/le_monde.png';
+import pass_culture from '../assets/images/partenaires/pass_culture.png';
+---
+
+<Layout>
+  <div class=" bg-green-50">
+
+    <div>
+      <Image src={accueil} alt="Robot" class="relative w-full lg:w-1/2 lg:ml-96"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <div class="pb-10">
+          <h1>SCI-FISTIVAL</h1>
+          <h3>Ce festival n’existe</h3>
+          <h3>pas sans vous</h3>
+        </div>
+        <div class="pb-10">
+          <h2>14 & 15</h2>
+          <h2>MARS 2025</h2>
+          <h4>2 Rue André Parant, </h4>
+          <h4>90000 Belfort</h4>
+        </div>
+      </div>
+
+  <div >
+    <ul>
+    <li>
+      
+    <h4  class="pb-10 pt-10 text-center space-x-10">Ne manquez pas l’événement de l’année, réservez votre place aujourd’hui !</h4>
+      
+      <div class="flex justify-center">
+      <Button variant="default" url="/reservez" text="Réservez un billet">
+        <Image src={fleche_sci_fi} alt="Flèche"/>
+      </Button>
+      </div>
+    </li>
+
+    <li>
+      <div class=" pt-10 flex items-center justify-center">
+        <h4>Vous voulez Exposé dans notre festival ?</h4>
+      </div>
+      <div class="pb-10 flex items-center justify-center"><p>Alors inscrivez-vous en cliquant ci-dessous</p></div>
+      <div class="flex justify-center">
+      <Button variant="default" url="/Inscription" text="Inscription">
+        <Image src={fleche_sci_fi} alt="Flèche"/>
+      </Button>
+      </div>
+    </li>
+
+    <li>
+      <div class="pb-10 pt-10 flex justify-center">
+        <h4>Le programme de ce week-end est disponible !</h4>
+      </div>
+      <div class="flex justify-center">
+        <Button variant="default" url="/Programmation" text="Programmation">
+          <Image src={fleche_sci_fi} alt="Flèche"/>
+        </Button>
+      </div>
+    </li>
+</ul>
+</div>
+
+<div>
+  <h3 class="pt-10 flex justify-center">Nos partenaires</h3>
+  <div class=" flex items-center justify-center mt-28">
+    <div class=" overflow-x-auto flex space-x-4 snap-x snap-mandatory">
+        <div class=" flex-shrink-0 snap-center relative ">
+          <Image class="" src={france_trois} alt="" />
+        </div>
+        <div class=" flex-shrink-0 snap-center relative ">
+          <Image class="" src={gouvernement} alt=""/>
+        </div>
+        <div class=" flex-shrink-0 snap-center relative ">
+          <Image class="" src={le_monde} alt=""/>
+        </div>
+        <div class=" flex-shrink-0 snap-center relative ">
+          <Image class="" src={pass_culture} alt=""/>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+</Layout>
